@@ -1,6 +1,8 @@
  package com.example.korzakk.bankapplication;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -34,12 +36,26 @@ import android.widget.Toast;
      public void onClick(View view) {
         switch(view.getId()){
             case R.id.createBtnID:
-                Intent intent = new Intent(this, CreateAccountActivity.class);
-                startActivityForResult(intent, 1000);
+                Intent intentCreate = new Intent(this, CreateAccountActivity.class);
+                startActivityForResult(intentCreate, 1000);
                 break;
             case R.id.checkBtnID:
+                Intent intentCheck = new Intent(this, CheckAccountActivity.class);
+                intentCheck.putExtra("data",mAccountRepo.getmAccountMap());
+                startActivity(intentCheck);
                 break;
             case R.id.adminBtnID:
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setTitle("Administrator mode");
+                builder.setView((R.layout.dialog_admin));
+                builder.setPositiveButton("login", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                    }
+                });
+                builder.setNegativeButton("Close", null);
+                builder.show();
                 break;
             case R.id.exitBtnID:
                 break;
