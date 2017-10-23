@@ -1,5 +1,6 @@
  package com.example.korzakk.bankapplication;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -27,6 +28,8 @@ import android.widget.Button;
      public void onClick(View view) {
         switch(view.getId()){
             case R.id.createBtnID:
+                Intent intent = new Intent(this, CreateAccountActivity.class);
+                startActivity(intent);
                 break;
             case R.id.checkBtnID:
                 break;
