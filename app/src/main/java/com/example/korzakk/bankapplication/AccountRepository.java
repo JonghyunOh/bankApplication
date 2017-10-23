@@ -9,11 +9,11 @@ import java.util.HashMap;
 public class AccountRepository {
 
 
-    private AccountRepository instance = null;
+    private static AccountRepository instance = null;
 
     private HashMap<String, BankAccount> mAccountMap = null;
 
-    public AccountRepository getInstance(){
+    public static AccountRepository getInstance(){
         if(instance==null){
             instance = new AccountRepository();
         }
@@ -23,7 +23,10 @@ public class AccountRepository {
 
 
     private AccountRepository(){
-
+        mAccountMap = new HashMap<String, BankAccount>();
     }
 
+    public HashMap<String, BankAccount> getmAccountMap() {
+        return mAccountMap;
+    }
 }

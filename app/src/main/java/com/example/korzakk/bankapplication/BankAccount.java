@@ -1,10 +1,12 @@
 package com.example.korzakk.bankapplication;
 
+import java.io.Serializable;
+
 /**
  * Created by korza on 2017-10-23.
  */
 
-public class BankAccount {
+public class BankAccount implements Serializable{
 
     private String name = "";
     private String id = "";
