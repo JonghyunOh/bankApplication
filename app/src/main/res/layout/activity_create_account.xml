@@ -13,16 +13,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <EditText
+        android:inputType="textPassword"
         android:id="@+id/passTxtID"
         android:hint="Type your password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <EditText
+        android:inputType="textPassword"
         android:id="@+id/confimTxtID"
         android:hint="Confirm password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <EditText
+        android:inputType="number"
         android:id="@+id/depositTxtID"
         android:hint="Type your deposit"
         android:layout_width="match_parent"

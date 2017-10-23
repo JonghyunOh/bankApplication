@@ -14,11 +14,11 @@ import android.widget.Button;
         setContentView(R.layout.activity_main);
 
         Button mCreateBtn = (Button)findViewById(R.id.createBtnID);
-        Button mCheckeBtn = (Button)        findViewById(R.id.checkBtnID);
+        Button mCheckeBtn = (Button)findViewById(R.id.checkBtnID);
         Button mAdminBtn = (Button)findViewById(R.id.adminBtnID);
         Button mExitBtn = (Button)findViewById(R.id.exitBtnID);
 
-        mCheckeBtn.setOnClickListener(this);
+        mCreateBtn.setOnClickListener(this);
         mCheckeBtn.setOnClickListener(this);
         mAdminBtn.setOnClickListener(this);
         mExitBtn.setOnClickListener(this);
